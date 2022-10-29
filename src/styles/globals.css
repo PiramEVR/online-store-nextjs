@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .link {
+        @apply cursor-pointer font-medium hover:text-gray-800 text-base sm:text-xl
+    }
+    .button {
+        @apply p-2 text-xs md:text-sm
+        /*bg-gradient-to-l from-orange-200 to-orange-400*/
+        bg-orange-400
+        border border-orange-300 rounded-sm
+         /*active:from-orange-500 active:to-orange-300*/
+         active:bg-orange-500
+    }
+}
