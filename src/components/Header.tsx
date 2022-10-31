@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image'
 import goabayLogo from '../../public/goabayLogo.png'
 import {MagnifyingGlassIcon, ShoppingCartIcon, Bars4Icon} from '@heroicons/react/24/outline'
+import {signIn, signOut, useSession} from 'next-auth/react'
 
 const Header = () => {
     return (
@@ -21,13 +22,13 @@ const Header = () => {
                     />
                 </div>
                 {/*Search*/}
-                {/*<div className='hidden sm:flex items-center h-10 rounded-md ml-3 flex-grow bg-orange-400 hover:bg-orange-500 '>*/}
-                {/*    <input className='p-2 w-6 grow shrink rounded-l-md focus:outline-none px-4' type="text"/>*/}
-                {/*    <MagnifyingGlassIcon className='h-12 p-4 cursor-pointer'/>*/}
-                {/*</div>*/}
+                     {/*<div className='hidden sm:flex items-center h-10 rounded-md ml-3 flex-grow bg-orange-400 hover:bg-orange-500 '>*/}
+                     {/*    <input className='p-2 w-6 grow shrink rounded-l-md focus:outline-none px-4' type="text"/>*/}
+                     {/*    <MagnifyingGlassIcon className='h-12 p-4 cursor-pointer'/>*/}
+                     {/*</div>*/}
                 {/*Right*/}
                 <div className='flex items-center space-x-3 sm:space-x-6 mx-3 sm:mx-6'>
-                    <div className='link'>
+                    <div onClick={()=>signIn()} className='link'>
                         <p>
                             Piram
                         </p>
